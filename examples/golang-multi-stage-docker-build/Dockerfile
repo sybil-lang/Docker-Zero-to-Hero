@@ -3,7 +3,7 @@
 ###########################################
 
 FROM ubuntu AS build
-
+ENV PIP_BREAK_SYSTEM_PACKAGES 1
 RUN apt-get update && apt-get install -y golang-go
 
 ENV GO111MODULE=off
